@@ -10,7 +10,7 @@
           </label>
         </div>
         <div class="md:w-2/3">
-          <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-full-name" type="text" placeholder="JuanDeLaCruz@gmail.com" v-model="email">
+          <input v-bind:class="inputClass" id="inline-full-name" type="text" placeholder="JuanDeLaCruz@gmail.com" v-model="email">          
           <span class="text-red-500 text-xs italic" v-if="!validEmail">Please enter a valid email address.</span>
         </div>
       </div>
@@ -22,7 +22,7 @@
           </label>
         </div>
         <div class="md:w-2/3">
-          <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-first-name" type="text" placeholder="Juan" v-model="firstName">
+          <input v-bind:class="inputFNameClass" id="inline-first-name" type="text" placeholder="Juan" v-model="firstName">
           <p class="text-red-500 text-xs italic" v-if="!validFirstName">Please enter a valid first name.</p>
         </div>
       </div>
@@ -34,7 +34,7 @@
           </label>
         </div>
         <div class="md:w-2/3">
-          <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-last-name" type="text" placeholder="Dela Cruz" v-model="lastName">
+          <input v-bind:class="inputLNameClass" id="inline-last-name" type="text" placeholder="Dela Cruz" v-model="lastName">
           <p class="text-red-500 text-xs italic" v-if="!validLastName">Please enter a valid last name.</p>
         </div>
       </div>
@@ -46,7 +46,7 @@
           </label>
         </div>
         <div class="md:w-2/3">
-          <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-phone-number" type="text" placeholder="09XX-XXX-XXXX" v-model="phoneNumber">
+          <input v-bind:class="inputPhoneClass" id="inline-phone-number" type="text" placeholder="09XX-XXX-XXXX" v-model="phoneNumber">
           <p class="text-red-500 text-xs italic" v-if="!validPhone">Please enter a valid phone number.</p>
         </div>
       </div>
@@ -95,7 +95,39 @@ export default {
     },
     validForm() {
       return this.validEmail && this.validFirstName && this.validLastName && this.validPhone
+    },
+
+    inputClass() {
+    if (!this.validEmail) {
+      return "bg-gray-200 appearance-none border-2 border-red-500 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500";
+    } else {
+      return "bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-green-500";
     }
+    },
+    inputFNameClass(){
+    if (!this.validFirstName) {
+      return "bg-gray-200 appearance-none border-2 border-red-500 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500";
+    }
+    else {
+      return "bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-green-500";
+    }
+    },
+    inputLNameClass(){
+    if (!this.validLastName) {
+      return "bg-gray-200 appearance-none border-2 border-red-500 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500";
+    }
+    else {
+      return "bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-green-500";
+    }
+    },
+    inputPhoneClass(){
+    if (!this.validPhone) {
+      return "bg-gray-200 appearance-none border-2 border-red-500 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500";
+    }
+    else {
+      return "bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-green-500";
+    }
+    },
   },
   methods: {
     say(message){
