@@ -245,7 +245,7 @@ export default {
     }
   },
 }
-</script> -->
+</script>
 
 <style scoped>
   @tailwind base;
