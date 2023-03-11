@@ -43,4 +43,6 @@ Moving on, React for me was not as simple as Vue and Svelte, but after thorough 
 online, I soon came to understand what certain stuff does. It took some time for me to get to learn it
 because it was not as similar as Vue or Svelte and I couldnt find the time to replicate certain 
 features I did in Svelte and Vue, such as the input border changing. Nonetheless, once I understood it
-it became sort of intuitive, more than what Angular offered me. 
+it became sort of intuitive, more than what Angular offered me. Although I do feel like there would
+be chances of hidden bugs that I couldnt see when it comes to React, because there are many specific
+scenarios you would have to cover. 
