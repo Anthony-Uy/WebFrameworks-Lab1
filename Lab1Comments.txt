@@ -1,0 +1,46 @@
+Lab 1: Working with frameworks
+For this lab, I am aiming on getting an A(93) as I did three web frameworks.
+For bonuses, I also used tailwind css for all three web frameworks, and I am
+writing down in this txt file, what I liked about each web framework.
+
+How to run the different Web Applications in CMD:
+Vue:
+cd Vue
+cd vue-project
+npm run dev
+
+Svelte:
+cd Svelte
+cd myapp
+npm run dev
+
+React:
+cd react_app
+npm run start
+
+What I liked about each framework:
+1. Vue
+Vue was the first web framework that I successfully tried. After doing some research at the syntax 
+and how to do certain features, it became intuitive for me. This is also the reason why, compared to my
+other two webapps made in svelte and react, Vue has the most features. I also liked Vue because it was easy to
+understand which made me understand the other frameworks much easier.
+
+
+2. Svelte
+I liked svelte because it was almost similar to Vue, and I like Vue. Since I understood Vue, it was just a 
+matter of using almost the same code as I used in vue, but changing certain parts of the syntax. Similar to Vue, 
+Svelte felt intuitive to understand because it was simple for me. 
+
+3. React
+Funny story is I initially hated React because it took me such a long time 
+in the beginning to download and set it up. It was the first thing I wanted to try
+but after a few days of trying to download and set it up, it just would not work 
+on my laptop. I finished using Vue and Svelte first, and then I tried Angular. I 
+did not like Angular at all which is why I tried again for React and thankfully 
+this time it worked. 
+
+Moving on, React for me was not as simple as Vue and Svelte, but after thorough reading and research
+online, I soon came to understand what certain stuff does. It took some time for me to get to learn it
+because it was not as similar as Vue or Svelte and I couldnt find the time to replicate certain 
+features I did in Svelte and Vue, such as the input border changing. Nonetheless, once I understood it
+it became sort of intuitive, more than what Angular offered me. 
